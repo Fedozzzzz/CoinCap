@@ -1,0 +1,137 @@
+body{
+  overflow: hidden;
+}
+
+.app{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #499cd2;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.container{
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.app-table table{
+  border-collapse: collapse;
+  border:0;
+  width: 100%;
+  margin: 0;
+  border-spacing: 0;
+}
+
+.app-table tbody {
+  display: block;
+  /*overflow: hidden;*/
+  /*height:200px;*/
+  /*width: 100%;*/
+  height: 73vh;
+}
+  /*transition: top 1s ease-out 1s;*/
+
+.app-table thead tr{
+  display:block;
+}
+.scroll{
+  overflow: auto;
+  visibility: hidden;
+}
+.scroll tbody, .scroll:hover,.scroll:focus {
+  visibility: visible;
+}
+
+.app-table{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 100%;
+  height: 80vh;
+  background-color: aliceblue;
+  overflow-y: hidden;
+  border-radius: 10px;
+}
+
+.app-table th{
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.app-table th:nth-last-child(1){
+  padding-right: 30px;
+}
+
+/*.app-table:hover{*/
+/*  overflow-y: scroll;*/
+/*  overflow-x: hidden;*/
+/*}*/
+
+.app-table td,th {
+  width: 180px;
+  border-bottom: #b2b3bc solid 1px;
+}
+
+.app-table__rank{
+  /*width: 100px;*/
+  text-align: center;
+}
+
+.app-table__name{
+  text-align: left;
+}
+
+.app-table__fields{
+  text-align: right;
+}
+
+@media screen and (max-width: 1050px){
+  .scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: visible;
+  }
+
+}
+
+@media screen and (max-width: 470px) {
+  .app-table tr th:nth-child(4), tr td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-table tr th:nth-child(5), tr td:nth-child(5) {
+    display: none;
+  }
+}
+
+/*Logo*/
+
+.app-logo {
+  /*float: right;*/
+  margin: 20px auto;
+  width: 100px;
+}
+/*.scroll{*/
+/*  overflow-y:scroll;*/
+/*  !*height:100px;*!*/
+/*}*/
+
+/*.app-table__head{*/
+/*  position: sticky;*/
+/*  top: 0;*/
+/*  background-color: white;*/
+/*}*/
+/*td, th{*/
+/*  border: 1px solid gray;*/
+/*  border-collapse: collapse;*/
+/*}*/
+
+/*.app-table__row{*/
+/*  margin: 10px 0;*/
+/*}*/
