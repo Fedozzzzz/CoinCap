@@ -6,7 +6,9 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Logo.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/MainTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Socket.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/functions/getData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/functions/socket.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/images/black.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
@@ -68,6 +70,9 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="socket.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="socket.js" working-dir="$PROJECT_DIR$/src/functions">
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -78,6 +83,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.socket.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -91,7 +101,11 @@
       <updated>1564647557673</updated>
       <workItem from="1564647559358" duration="12181000" />
       <workItem from="1564729723085" duration="7635000" />
-      <workItem from="1564741389774" duration="11562000" />
+      <workItem from="1564741389774" duration="13006000" />
+      <workItem from="1564763182262" duration="6609000" />
+      <workItem from="1564817880672" duration="1810000" />
+      <workItem from="1564852131726" duration="6534000" />
+      <workItem from="1564858704308" duration="444000" />
     </task>
     <servers />
   </component>

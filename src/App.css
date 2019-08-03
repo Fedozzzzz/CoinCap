@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 body{
   overflow: hidden;
+  font-family: 'Lato', sans-serif;
 }
 
 .app{
@@ -10,7 +13,7 @@ body{
   justify-content: center;
   background-color: #499cd2;
   align-items: center;
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   height: 100vh;
 }
 
@@ -19,6 +22,8 @@ body{
   max-width: 1000px;
   margin: 0 auto;
 }
+
+/*Table*/
 
 .app-table table{
   border-collapse: collapse;
@@ -30,12 +35,8 @@ body{
 
 .app-table tbody {
   display: block;
-  /*overflow: hidden;*/
-  /*height:200px;*/
-  /*width: 100%;*/
-  height: 73vh;
+  height: 70vh;
 }
-  /*transition: top 1s ease-out 1s;*/
 
 .app-table thead tr{
   display:block;
@@ -48,13 +49,19 @@ body{
   visibility: visible;
 }
 
+.scroll tbody tr:hover{
+  background-color: #2e667f;
+  color: white;
+}
+
 .app-table{
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   width: 100%;
-  height: 80vh;
+  height: 77vh;
   background-color: aliceblue;
   overflow-y: hidden;
   border-radius: 10px;
+  outline: none;
 }
 
 .app-table th{
@@ -63,13 +70,8 @@ body{
   background-color: white;
 }
 .app-table th:nth-last-child(1){
-  padding-right: 30px;
+  padding-right: 27px;
 }
-
-/*.app-table:hover{*/
-/*  overflow-y: scroll;*/
-/*  overflow-x: hidden;*/
-/*}*/
 
 .app-table td,th {
   width: 180px;
@@ -113,25 +115,30 @@ body{
 /*Logo*/
 
 .app-logo {
-  /*float: right;*/
-  margin: 20px auto;
+  margin: 15px auto;
   width: 100px;
 }
-/*.scroll{*/
-/*  overflow-y:scroll;*/
-/*  !*height:100px;*!*/
-/*}*/
 
-/*.app-table__head{*/
-/*  position: sticky;*/
-/*  top: 0;*/
-/*  background-color: white;*/
-/*}*/
-/*td, th{*/
-/*  border: 1px solid gray;*/
-/*  border-collapse: collapse;*/
-/*}*/
+/*Button*/
 
-/*.app-table__row{*/
-/*  margin: 10px 0;*/
-/*}*/
+.app-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.app-btn__view {
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 7px 15px;
+  color: white;
+  background-color: #51c45b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  outline: none;
+}
+
+.app-btn__view:hover{
+  background-color: #1f394b;
+}
