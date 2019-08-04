@@ -5,5 +5,4 @@ function getData(size=50) {
         .then(response => response.json())
 }
 
-
 export default getData;

@@ -13,7 +13,6 @@ body{
   justify-content: center;
   background-color: #499cd2;
   align-items: center;
-  /*font-family: sans-serif;*/
   height: 100vh;
 }
 
@@ -41,10 +40,12 @@ body{
 .app-table thead tr{
   display:block;
 }
+
 .scroll{
   overflow: auto;
   visibility: hidden;
 }
+
 .scroll tbody, .scroll:hover,.scroll:focus {
   visibility: visible;
 }
@@ -69,8 +70,9 @@ body{
   top: 0;
   background-color: white;
 }
+
 .app-table th:nth-last-child(1){
-  padding-right: 27px;
+  padding-right: 40px;
 }
 
 .app-table td,th {
@@ -79,7 +81,6 @@ body{
 }
 
 .app-table__rank{
-  /*width: 100px;*/
   text-align: center;
 }
 
@@ -97,20 +98,22 @@ body{
     overflow-x: hidden;
     visibility: visible;
   }
-
-}
-
-@media screen and (max-width: 470px) {
-  .app-table tr th:nth-child(4), tr td:nth-child(4) {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .app-table tr th:nth-child(5), tr td:nth-child(5) {
     display: none;
   }
 }
+
+@media screen and (max-width: 740px) {
+  .app-table tr th:nth-child(4), tr td:nth-child(4) {
+     display: none;
+   }
+}
+
+/*@media screen and (max-width: 600px) {*/
+/*  .app-table tr th:nth-child(5), tr td:nth-child(5) {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
 
 /*Logo*/
 

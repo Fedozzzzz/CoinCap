@@ -1,6 +1,5 @@
 import React from "react"
-import getData from "../functions/getData";
-
+import getData from "../js/getData";
 
 let url_trades="wss://ws.coincap.io/trades/binance";
 let url_prices = "wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin";
@@ -21,13 +20,10 @@ class MainTable extends React.Component {
     };
 
     setData() {
-        // let tempSize=this.state.size+
         this.setState({size: this.state.size + 50});
         getData(this.state.size).then(res => {
-                // console.log(res);
                 let tempMap = new Map();
                 res.data.forEach((el => {
-                        // console.log(el);
                         let tempObj = {};
                         tempObj.rank = el.rank;
                         tempObj.priceUsd = el.priceUsd;
@@ -37,24 +33,6 @@ class MainTable extends React.Component {
                         tempMap.set(el.id, tempObj);
                     }
                 ));
-
-                // let tempArr = [];
-                // // let i=0;
-                // let size = res.data.length;
-                // // console.log(size);
-                // // console.log(res.data[0].id);
-                // for (let i = 0; i < size; i++) {
-                //     let tempObj = {};
-                //     tempObj.id = res.data[i].id;
-                //     tempObj.rank = res.data[i].rank;
-                //     tempObj[tempObj.id] = res.data[i].priceUsd;
-                //     tempObj.priceUsd = res.data[i].priceUsd;
-                //     tempObj.marketCapUsd = res.data[i].marketCapUsd;
-                //     tempObj.vwap24Hr = res.data[i].vwap24Hr;
-                //     tempObj.name = res.data[i].name;
-                //     // console.log(tempObj);
-                //     tempArr.push(tempObj);
-                // }
                 this.setState({
                     tempData: tempMap,
                     isLoaded: true
@@ -68,40 +46,24 @@ class MainTable extends React.Component {
         const tradeWs = new WebSocket(url_prices_ALL);
 
         tradeWs.addEventListener("message", ev => {
-
-            // let tempMap=new Map(JSON.parse(ev.data));
             let tempObj = JSON.parse(ev.data);
-            // console.log(tempObj);
             let tempMap = this.state.tempData;
-            // console.log("tempMap: ", tempMap);
-            // console.log(ev.json());
             for (let el in tempObj) {
                 if (tempMap.get(el)) {
                     let temp = tempMap.get(el);
                     temp.priceUsd = tempObj[el];
                     tempMap.set(el, temp);
                 }
-                // console.log(el.toString());
-                // console.log(tempMap[el]);
-                // console.log(tempMap[el.toString()]);
-                // tempMap[el.toString()].priceUsd = tempObj[el];
             }
             this.setState({tempData: tempMap})
         });
-
-        // tradeWs.stop();
-        // this.setState(el);
-        // });
-        // this.setState(this.state.timestamp.map(el=>this.state[el]));
-        // tradeWs.addEventListener("message", ev => console.log({timestamp: ev.data}));
     }
 
     static formatUsd(el) {
-        // console.log(el);
         return new Intl.NumberFormat("en-US",
             {
                 style: "currency", currency: "USD",
-                minimumFractionDigits: 2
+                minimumFractionDigits: (el > 1) ? 2 : 8
             }).format(el);
     }
 
@@ -120,8 +82,6 @@ class MainTable extends React.Component {
     }
 
     render() {
-        console.log("render");
-        console.log(this.state.tempData);
         return (
             <div>
                 <div className="container">
@@ -131,7 +91,7 @@ class MainTable extends React.Component {
                             <tr>
                                 <th className="app-table__rank">Rank</th>
                                 <th className="app-table__name">Name</th>
-                                <th className="app-table__fields">Price</th>
+                                <th className="app-table__rank">Price</th>
                                 <th className="app-table__fields">Market Cap</th>
                                 <th className="app-table__fields">VWAP (24h)</th>
                             </tr>

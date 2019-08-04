@@ -70,7 +70,7 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
-    <configuration name="socket.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="socket.js" working-dir="$PROJECT_DIR$/src/functions">
+    <configuration name="socket.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/js/socket.js" working-dir="$PROJECT_DIR$/src/js">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -105,7 +105,8 @@
       <workItem from="1564763182262" duration="6609000" />
       <workItem from="1564817880672" duration="1810000" />
       <workItem from="1564852131726" duration="6534000" />
-      <workItem from="1564858704308" duration="444000" />
+      <workItem from="1564858704308" duration="880000" />
+      <workItem from="1564937710630" duration="3792000" />
     </task>
     <servers />
   </component>
