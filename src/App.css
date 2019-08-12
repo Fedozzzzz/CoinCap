@@ -80,7 +80,7 @@ body{
 }
 
 .app-table__name {
-  min-width: 190px;
+  /*min-width: 190px;*/
   text-align: left;
 }
 
@@ -88,14 +88,19 @@ body{
   text-align: right;
 }
 
-@media screen and (max-width: 1050px){
-  .scroll{
+@media screen and (max-width: 1050px) {
+  .scroll {
     overflow-y: scroll;
     overflow-x: hidden;
     visibility: visible;
   }
+
   .app-table tr th:nth-child(5), tr td:nth-child(5) {
     display: none;
+  }
+
+  .app-table {
+    overflow-x: hidden;
   }
 }
 
