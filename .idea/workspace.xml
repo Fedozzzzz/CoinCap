@@ -7,17 +7,19 @@
       <change afterPath="$PROJECT_DIR$/src/components/Logo.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/MainTable.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Socket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functions/getData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functions/socket.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/images/black.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/getData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/socket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +108,9 @@
       <workItem from="1564817880672" duration="1810000" />
       <workItem from="1564852131726" duration="6534000" />
       <workItem from="1564858704308" duration="880000" />
-      <workItem from="1564937710630" duration="3792000" />
+      <workItem from="1564937710630" duration="5609000" />
+      <workItem from="1565626914128" duration="5833000" />
+      <workItem from="1565634118633" duration="1061000" />
     </task>
     <servers />
   </component>

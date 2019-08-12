@@ -30,6 +30,8 @@ class MainTable extends React.Component {
                         tempObj.marketCapUsd = el.marketCapUsd;
                         tempObj.vwap24Hr = el.vwap24Hr;
                         tempObj.name = el.name;
+                        tempObj.condition = "Null";
+                        // tempObj.changed = false;
                         tempMap.set(el.id, tempObj);
                     }
                 ));
@@ -38,7 +40,7 @@ class MainTable extends React.Component {
                     isLoaded: true
                 });
             }
-        );
+        ).catch(err => console.log(err));
     }
 
     componentDidMount() {
@@ -51,6 +53,8 @@ class MainTable extends React.Component {
             for (let el in tempObj) {
                 if (tempMap.get(el)) {
                     let temp = tempMap.get(el);
+                    temp.condition = temp.priceUsd - tempObj[el] < 0 ? "Increase" : "Decrease";
+                    // temp.changed = true;
                     temp.priceUsd = tempObj[el];
                     tempMap.set(el, temp);
                 }
@@ -70,7 +74,16 @@ class MainTable extends React.Component {
     renderTable() {
         let table = [];
         this.state.tempData.forEach((value) => {
-            table.push(<tr key={value.id}>
+            // let className = value.changed ? "changed_row" : "row";
+            // value.changed = false;
+            let className = "row";
+            if (value.condition === "Increase") {
+                className = "increased_row";
+            } else if (value.condition === "Decrease") {
+                className = "decreased_row";
+            }
+            value.condition = "Null";
+            table.push(<tr key={value.id} className={className}>
                 <td className="app-table__rank">{value.rank}</td>
                 <td className="app-table__name">{value.name}</td>
                 <td className="app-table__fields">{MainTable.formatUsd(value.priceUsd)}</td>
